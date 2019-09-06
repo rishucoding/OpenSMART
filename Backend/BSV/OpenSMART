@@ -55,10 +55,11 @@ function verilog_arg {
 function routerVerilog {
 	mkdir -p $BUILDDIR
 	mkdir -p $BUILDDIR/bdir
-	bsc -verilog -g mkBaselineRouter -aggressive-conditions -no-warn-action-shadowing +RTS -K16388608 -RTS -simdir $BUILDDIR/bdir -info-dir $BUILDDIR/bdir -bdir $BUILDDIR/bdir -p +:$INCLUDES -u ./testbenches/BaselineRouter.bsv
-    mkdir -p Verilog
-    mv *.v ./Verilog/
-    mv Types/*.v ./Verilog/
+	mkdir -p Verilog
+  bsc -verilog -vdir ./Verilog -g mkBaselineRouter -aggressive-conditions -no-warn-action-shadowing +RTS -K16388608 -RTS -simdir $BUILDDIR/bdir -info-dir $BUILDDIR/bdir -bdir $BUILDDIR/bdir -p +:$INCLUDES -u ./testbenches/BaselineRouter.bsv
+    ##mkdir -p Verilog
+    ##mv *.v ./Verilog/
+    ##mv Types/*.v ./Verilog/
 }
 
 function run_test {

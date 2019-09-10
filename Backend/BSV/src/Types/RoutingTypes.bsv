@@ -2,7 +2,7 @@
  Message Types
 
  Author: Hyoukjun Kwon(hyoukjun@gatech.edu)
- 
+
 
 */
 
@@ -14,7 +14,7 @@ import Types::*;
 
 /************* Definitions **************/
 /* 1. Direction bits */
-typedef Bit#(NumPorts) Direction;
+typedef Bit#(NumPorts) Direction; // NumPorts = 5 {N S E W L}
 
 Direction north_ = 5'b00001;
 Direction east_  = 5'b00010;

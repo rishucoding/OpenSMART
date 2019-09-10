@@ -10,8 +10,8 @@ typedef 1       NumFlitsPerControlMessage;
 
 typedef 6       UserHPCMax;
 
-typedef 2       MeshWidth;
-typedef 2       MeshHeight;
+typedef 4       MeshWidth;
+typedef 4       MeshHeight;
 typedef 1       NumUserVCs;
 
 typedef 2     InjectionRate; //Injection Rate: 0.XX
@@ -33,7 +33,7 @@ typedef 5                  NumPorts;       //N, E, S, W, L
 typedef TSub#(NumPorts, 1) NumNormalPorts; //N, E, S, W
 
 typedef NumPorts           MaxNumPorts;    //For arbitrary topology
-typedef NumNormalPorts     MaxNumNormalPorts; 
+typedef NumNormalPorts     MaxNumNormalPorts;
 
 //Mesh dimensions
 typedef	TAdd#(1, TLog#(MeshWidth))	MeshWidthBitSz;

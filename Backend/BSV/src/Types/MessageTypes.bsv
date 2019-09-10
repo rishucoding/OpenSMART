@@ -2,7 +2,7 @@
  Message Types
 
  Author: Hyoukjun Kwon(hyoukjun@gatech.edu)
- 
+
 
 */
 
@@ -57,6 +57,7 @@ import RoutingTypes::*;
     FlitType  flitType;  //Head, Body, Tail, HeadTail
     RouteInfo routeInfo;
     FlitData  flitData;
+// This 'stat' should be discarded in the generated verilog unless needed for Performance Counter.
 // `ifdef DETAILED_STATISTICS
     FlitStatistics stat;
 // `endif
